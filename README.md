@@ -77,17 +77,7 @@
 
 ---
 
-### GitHub Statistics
-
-<p align="center">
-  <a href="https://github.com/Prasanth866">
-    <img src="https://github-readme-stats.vercel.app/api?username=prasanth866&show_icons=true&theme=tokyonight&count_private=true&hide_border=false" alt="GitHub Stats" />
-  </a>
-</p>
-
----
-
-### GitHub Contribution Graph Animation
+### GitHub Contributions
 
 <p align="center">
   <picture>
