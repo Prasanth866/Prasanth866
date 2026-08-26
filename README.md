@@ -81,15 +81,7 @@
 
 <p align="center">
   <a href="https://github.com/Prasanth866">
-    <img src="https://streak-stats.demolab.com/?user=Prasanth866&theme=tokyonight&hide_border=false" alt="GitHub Streak Stats" width="49%" />
-  </a>
-  <a href="https://github.com/Prasanth866">
-    <img src="https://github-readme-stats.vercel.app/api?username=prasanth866&show_icons=true&theme=tokyonight&count_private=true&hide_border=false" alt="GitHub Stats" width="49%" />
-  </a>
-</p>
-<p align="center">
-  <a href="https://github.com/Prasanth866">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=prasanth866&layout=compact&theme=tokyonight&hide_border=false" alt="Top Languages" />
+    <img src="https://github-readme-stats.vercel.app/api?username=prasanth866&show_icons=true&theme=tokyonight&count_private=true&hide_border=false" alt="GitHub Stats" />
   </a>
 </p>
 
