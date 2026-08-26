@@ -50,11 +50,11 @@
 
 ---
 
-### ⚡ LeetCode Problem Solving & Streaks
+### ⚡ Leetcode Stats
 
 <p align="center">
   <a href="https://leetcode.com/u/prasanth_57/" target="_blank">
-    <img src="./assets/leetcode-stats.svg" alt="LeetCode Profile Stats & Streak" />
+    <img src="https://leetcard.jacoblin.cool/prasanth_57?theme=wtf&font=Cambay&ext=heatmap" alt="Leetcode stats" />
   </a>
 </p>
 
