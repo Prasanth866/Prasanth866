@@ -1,10 +1,6 @@
 <h1 align="center">Hi 👋, I'm Prasanth P</h1>
 <h3 align="center">Third-year CSE Student at PSG College of Technology | Backend Developer passionate about AI/ML integrations</h3>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=prasanth866&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
-</p>
-
 ---
 
 ### 👨‍💻 About Me
