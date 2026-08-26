@@ -77,6 +77,16 @@
 
 ---
 
+### GitHub Stats
+
+<p align="center">
+  <a href="https://github.com/Prasanth866" target="_blank">
+    <img src="./assets/github-stats.svg" alt="GitHub Stats" />
+  </a>
+</p>
+
+---
+
 ### GitHub Contributions
 
 <p align="center">
@@ -86,3 +96,4 @@
     <img alt="Snake Animation" src="https://raw.githubusercontent.com/Prasanth866/Prasanth866/output/github-contribution-grid-snake-dark.svg">
   </picture>
 </p>
+
