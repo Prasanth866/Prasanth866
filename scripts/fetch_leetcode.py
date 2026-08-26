@@ -69,46 +69,53 @@ def generate_svg(stats):
     hard_solved = stats.get("hard_solved", 0)
     hard_total = stats.get("hard_total", 800)
 
-    # Calculate percentages for progress bars (width 210)
+    # Calculate percentages for progress bars (max width 205)
+    bar_max_w = 205
     easy_pct = (easy_solved / max(1, easy_total)) if easy_total else 0
     med_pct = (medium_solved / max(1, medium_total)) if medium_total else 0
     hard_pct = (hard_solved / max(1, hard_total)) if hard_total else 0
 
-    easy_bar_w = max(4, int(210 * min(1.0, easy_pct)))
-    med_bar_w = max(4, int(210 * min(1.0, med_pct)))
-    hard_bar_w = max(4, int(210 * min(1.0, hard_pct)))
+    easy_bar_w = max(4, int(bar_max_w * min(1.0, easy_pct))) if easy_solved > 0 else 0
+    med_bar_w = max(4, int(bar_max_w * min(1.0, med_pct))) if medium_solved > 0 else 0
+    hard_bar_w = max(4, int(bar_max_w * min(1.0, hard_pct))) if hard_solved > 0 else 0
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" fill="none" role="img">
   <style>
     .header {{
-      font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-      fill: #70a5fd;
+      font: 700 16px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      fill: #7aa2f7;
     }}
     .stat-label {{
-      font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif;
-      fill: #38bdae;
+      font: 500 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      fill: #a9b1d6;
     }}
     .stat-val {{
-      font: 700 13px 'Segoe UI', Ubuntu, Sans-Serif;
+      font: 700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       fill: #c0caf5;
     }}
-    .easy-label {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #73daca; }}
-    .med-label {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e0af68; }}
-    .hard-label {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f7768e; }}
-    .diff-val {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #a9b1d6; }}
+    .easy-label {{ font: 600 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; fill: #73daca; }}
+    .med-label {{ font: 600 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; fill: #e0af68; }}
+    .hard-label {{ font: 600 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; fill: #f7768e; }}
+    .diff-val {{ font: 600 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; fill: #c0caf5; }}
     .bar-bg {{ fill: #24283b; rx: 3px; }}
   </style>
 
   <!-- TokyoNight Background Card -->
-  <rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" stroke-opacity="0" width="494" fill="#1a1b26"/>
+  <rect x="0.5" y="0.5" rx="8" height="194" stroke="#414868" stroke-width="1" width="494" fill="#1a1b26"/>
 
-  <!-- Title -->
-  <g transform="translate(25, 35)">
-    <text x="0" y="0" class="header">LeetCode Stats ({username})</text>
+  <!-- Header with LeetCode Logo -->
+  <g transform="translate(25, 24)">
+    <!-- LeetCode Logo -->
+    <svg viewBox="0 0 24 24" width="20" height="20" x="0" y="0">
+      <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.261 2.87 10.507a6.273 6.273 0 0 0 0 8.87 6.273 6.273 0 0 0 8.87 0l5.802-5.802a1.374 1.374 0 1 0-1.943-1.943L9.797 17.434a3.525 3.525 0 0 1-4.984 0 3.525 3.525 0 0 1 0-4.984l3.508-3.508 4.723-4.723A1.374 1.374 0 0 0 13.483 0z" fill="#7aa2f7"/>
+      <path d="M9.838 10.924a1.374 1.374 0 0 0-.971.402l-2.07 2.07a1.374 1.374 0 1 0 1.943 1.943l2.07-2.07a1.374 1.374 0 0 0-.972-2.345z" fill="#FFA116"/>
+      <path d="M23.107 10.898H11.205a1.374 1.374 0 0 0 0 2.748h11.902a1.374 1.374 0 1 0 0-2.748z" fill="#FFA116"/>
+    </svg>
+    <text x="28" y="16" class="header">LeetCode Stats ({username})</text>
   </g>
 
   <!-- Left Column: Streak, Active Days, Rank, Total Solved -->
-  <g transform="translate(25, 50)">
+  <g transform="translate(25, 52)">
     <!-- Streak -->
     <g transform="translate(0, 20)">
       <svg viewBox="0 0 16 16" width="16" height="16" fill="#ff9e64" x="0" y="-12">
@@ -119,7 +126,7 @@ def generate_svg(stats):
     </g>
 
     <!-- Active Days -->
-    <g transform="translate(0, 45)">
+    <g transform="translate(0, 46)">
       <svg viewBox="0 0 16 16" width="16" height="16" fill="#7aa2f7" x="0" y="-12">
         <path d="M4.75 0a.75.75 0 0 1 .75.75V2h5V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 13.25 16H2.75A1.75 1.75 0 0 1 1 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 0 1 4.75 0ZM2.5 7.5v6.75c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V7.5H2.5Z"/>
       </svg>
@@ -128,7 +135,7 @@ def generate_svg(stats):
     </g>
 
     <!-- Global Rank -->
-    <g transform="translate(0, 70)">
+    <g transform="translate(0, 72)">
       <svg viewBox="0 0 16 16" width="16" height="16" fill="#e0af68" x="0" y="-12">
         <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2.75a3.75 3.75 0 0 1-3.25 3.715V10.5h1.5a1.75 1.75 0 0 1 1.75 1.75v1.25a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1.25A1.75 1.75 0 0 1 5.75 10.5h1.5V8.965A3.75 3.75 0 0 1 4 5.25V2.5Z"/>
       </svg>
@@ -137,8 +144,8 @@ def generate_svg(stats):
     </g>
 
     <!-- Total Solved -->
-    <g transform="translate(0, 95)">
-      <svg viewBox="0 0 16 16" width="16" height="16" fill="#bf91f3" x="0" y="-12">
+    <g transform="translate(0, 98)">
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="#bb9af7" x="0" y="-12">
         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm9.78-2.22a.75.75 0 0 0-1.06-1.06L6.75 8.19 5.28 6.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4-4Z"/>
       </svg>
       <text class="stat-label" x="25" y="0">Total Solved:</text>
@@ -147,29 +154,29 @@ def generate_svg(stats):
   </g>
 
   <!-- Right Column: Problems Solved Progress Breakdown -->
-  <g transform="translate(255, 50)">
+  <g transform="translate(260, 52)">
     <!-- Easy -->
     <g transform="translate(0, 20)">
       <text class="easy-label" x="0" y="0">Easy</text>
-      <text class="diff-val" x="210" y="0" text-anchor="end">{easy_solved} <tspan fill="#565f89" font-size="11">/{easy_total}</tspan></text>
-      <rect class="bar-bg" x="0" y="7" width="210" height="6" />
-      <rect x="0" y="7" width="{easy_bar_w}" height="6" fill="#73daca" rx="3px" />
+      <text class="diff-val" x="205" y="0" text-anchor="end">{easy_solved} <tspan fill="#565f89" font-size="11">/{easy_total}</tspan></text>
+      <rect class="bar-bg" x="0" y="8" width="205" height="6" />
+      <rect x="0" y="8" width="{easy_bar_w}" height="6" fill="#73daca" rx="3px" />
     </g>
 
     <!-- Medium -->
-    <g transform="translate(0, 58)">
+    <g transform="translate(0, 59)">
       <text class="med-label" x="0" y="0">Medium</text>
-      <text class="diff-val" x="210" y="0" text-anchor="end">{medium_solved} <tspan fill="#565f89" font-size="11">/{medium_total}</tspan></text>
-      <rect class="bar-bg" x="0" y="7" width="210" height="6" />
-      <rect x="0" y="7" width="{med_bar_w}" height="6" fill="#e0af68" rx="3px" />
+      <text class="diff-val" x="205" y="0" text-anchor="end">{medium_solved} <tspan fill="#565f89" font-size="11">/{medium_total}</tspan></text>
+      <rect class="bar-bg" x="0" y="8" width="205" height="6" />
+      <rect x="0" y="8" width="{med_bar_w}" height="6" fill="#e0af68" rx="3px" />
     </g>
 
     <!-- Hard -->
-    <g transform="translate(0, 96)">
+    <g transform="translate(0, 98)">
       <text class="hard-label" x="0" y="0">Hard</text>
-      <text class="diff-val" x="210" y="0" text-anchor="end">{hard_solved} <tspan fill="#565f89" font-size="11">/{hard_total}</tspan></text>
-      <rect class="bar-bg" x="0" y="7" width="210" height="6" />
-      <rect x="0" y="7" width="{hard_bar_w}" height="6" fill="#f7768e" rx="3px" />
+      <text class="diff-val" x="205" y="0" text-anchor="end">{hard_solved} <tspan fill="#565f89" font-size="11">/{hard_total}</tspan></text>
+      <rect class="bar-bg" x="0" y="8" width="205" height="6" />
+      <rect x="0" y="8" width="{hard_bar_w}" height="6" fill="#f7768e" rx="3px" />
     </g>
   </g>
 </svg>"""
@@ -184,14 +191,14 @@ def main():
             print("Error: User data not found in response.")
             sys.exit(1)
 
-        questions = raw_data.get("data", {}).get("allQuestionsCount", [])
-        q_map = {q["difficulty"]: q["count"] for q in questions}
+        questions = raw_data.get("data", {}).get("allQuestionsCount") or []
+        q_map = {q["difficulty"]: q["count"] for q in questions if "difficulty" in q and "count" in q}
 
-        ac_submissions = user_data.get("submitStatsGlobal", {}).get("acSubmissionNum", [])
-        ac_map = {s["difficulty"]: s["count"] for s in ac_submissions}
+        ac_submissions = user_data.get("submitStatsGlobal", {}).get("acSubmissionNum") or []
+        ac_map = {s["difficulty"]: s["count"] for s in ac_submissions if "difficulty" in s and "count" in s}
 
-        calendar = user_data.get("userCalendar", {})
-        profile = user_data.get("profile", {})
+        calendar = user_data.get("userCalendar") or {}
+        profile = user_data.get("profile") or {}
 
         stats = {
             "username": USERNAME,

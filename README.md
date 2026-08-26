@@ -71,7 +71,7 @@
 
 <p align="center">
   <a href="https://leetcode.com/u/prasanth_57/" target="_blank">
-    <img src="https://leetcard.jacoblin.cool/prasanth_57?theme=wtf&font=Cambay&ext=heatmap" alt="Leetcode stats" />
+    <img src="./assets/leetcode-stats.svg" alt="LeetCode Stats" />
   </a>
 </p>
 
