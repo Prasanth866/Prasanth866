@@ -58,10 +58,7 @@
 
 <p align="center">
   <a href="https://leetcode.com/u/prasanth_57/" target="_blank">
-    <img src="https://leetcard.jacoblin.cool/prasanth_57?theme=dark&font=baloo&ext=activity" alt="LeetCode Activity & Streak" width="49%" />
-  </a>
-  <a href="https://leetcode.com/u/prasanth_57/" target="_blank">
-    <img src="./assets/leetcode-stats.svg" alt="LeetCode Problem Breakdown" width="49%" />
+    <img src="./assets/leetcode-stats.svg" alt="LeetCode Profile Stats & Streak" />
   </a>
 </p>
 
