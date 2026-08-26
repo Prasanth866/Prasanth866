@@ -1,18 +1,18 @@
-<h1 align="center">Hi 👋, I'm Prasanth P</h1>
+<h1 align="center">Hi, I'm Prasanth P</h1>
 <h3 align="center">Third-year CSE Student at PSG College of Technology | Backend Developer passionate about AI/ML integrations</h3>
 
 ---
 
-### 👨‍💻 About Me
+### About Me
 
-- 🔭 I’m currently working on **AI-driven agentic workflows and real-time backend systems**
-- 🌱 I’m currently learning **Agentic Design Patterns & Advanced System Architecture**
-- 👯 I’m looking to collaborate on **Open Source AI/ML projects**
-- 📫 How to reach me: **[prasanth.k.prabhu@gmail.com](mailto:prasanth.k.prabhu@gmail.com)**
+- Currently working on **AI-driven agentic workflows and real-time backend systems**
+- Currently learning **Agentic Design Patterns & Advanced System Architecture**
+- Looking to collaborate on **Open Source AI/ML projects**
+- How to reach me: **[prasanth.k.prabhu@gmail.com](mailto:prasanth.k.prabhu@gmail.com)**
 
 ---
 
-## 🛠️ Tools and Technologies
+## Tools and Technologies
 
 ### Programming Languages
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -47,7 +47,7 @@
 
 ---
 
-### 🌐 Connect & Profiles
+### Connect & Profiles
 
 <p align="left">
   <a href="https://www.linkedin.com/in/prasanth-prabhu-565876367/" target="_blank">
@@ -66,7 +66,7 @@
 
 ---
 
-### ⚡ Leetcode Stats
+### LeetCode Stats
 
 <p align="center">
   <a href="https://leetcode.com/u/prasanth_57/" target="_blank">
@@ -76,7 +76,7 @@
 
 ---
 
-### 📊 GitHub Statistics
+### GitHub Statistics
 
 <p align="center">
   <a href="https://github.com/Prasanth866">
@@ -94,7 +94,7 @@
 
 ---
 
-### 🐍 GitHub Contribution Graph Animation
+### GitHub Contribution Graph Animation
 
 <p align="center">
   <picture>
