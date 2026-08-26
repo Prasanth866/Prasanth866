@@ -1,0 +1,36 @@
+name: Update LeetCode Stats
+
+on:
+  schedule:
+    # Run every 12 hours
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/**"
+
+jobs:
+  update-leetcode:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Fetch LeetCode streak and update SVG
+        run: python3 scripts/fetch_leetcode.py
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update LeetCode streak and stats [skip ci]"
+          file_pattern: "assets/leetcode-stats.svg"

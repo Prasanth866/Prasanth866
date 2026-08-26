@@ -1,0 +1,84 @@
+<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #FFA116; }
+    .subtext { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b949e; }
+    .bold-stat { font: 700 22px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f0f6fc; }
+    .stat-label { font: 500 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b949e; }
+    .easy-text { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #00b8a3; }
+    .med-text { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffc01e; }
+    .hard-text { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ef4743; }
+    .count-text { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c9d1d9; }
+    .card-bg { fill: #0d1117; stroke: #30363d; stroke-width: 1; rx: 10px; }
+    .inner-card { fill: #161b22; rx: 8px; }
+  </style>
+
+  <rect width="495" height="195" class="card-bg" />
+
+  <!-- Title & Icon -->
+  <g transform="translate(25, 30)">
+    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.248 5.669 4.757a1.374 1.374 0 0 0-1.942 0l-3.3 3.3a1.374 1.374 0 0 0 0 1.942l4.271 4.271a1.374 1.374 0 0 0 1.942 0l7.306-7.306a1.374 1.374 0 0 0 0-1.942L14.444.438A1.374 1.374 0 0 0 13.483 0z" fill="#FFA116" transform="translate(0, -12) scale(1.1)"/>
+    <text x="26" y="0" class="header">LeetCode Profile Stats</text>
+    <text x="210" y="0" class="subtext">(@prasanth_57)</text>
+  </g>
+
+  <!-- Left Column: Streak & Ranking Card -->
+  <g transform="translate(25, 52)">
+    <rect width="180" height="120" class="inner-card" />
+    
+    <!-- Streak -->
+    <g transform="translate(15, 32)">
+      <text x="0" y="0" font-size="18">🔥</text>
+      <text x="28" y="-2" class="bold-stat">55</text>
+      <text x="65" y="-3" class="stat-label">Day Streak</text>
+    </g>
+
+    <!-- Active Days -->
+    <g transform="translate(15, 66)">
+      <text x="0" y="0" font-size="16">📅</text>
+      <text x="28" y="-2" class="bold-stat">235</text>
+      <text x="75" y="-3" class="stat-label">Active Days</text>
+    </g>
+
+    <!-- Ranking -->
+    <g transform="translate(15, 100)">
+      <text x="0" y="0" font-size="16">🏆</text>
+      <text x="28" y="-2" font-weight="700" font-size="14" fill="#58a6ff" font-family="'Segoe UI', Ubuntu, Sans-Serif">Rank #115,213</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Problems Solved Breakdown -->
+  <g transform="translate(225, 52)">
+    <rect width="245" height="120" class="inner-card" />
+
+    <!-- Total Solved Header -->
+    <g transform="translate(15, 25)">
+      <text x="0" y="0" class="stat-label">Solved Problems:</text>
+      <text x="110" y="0" font-weight="700" font-size="16" fill="#f0f6fc" font-family="'Segoe UI', Ubuntu, Sans-Serif">650</text>
+      <text x="145" y="0" class="subtext">/ 4033</text>
+    </g>
+
+    <!-- Easy -->
+    <g transform="translate(15, 52)">
+      <text x="0" y="0" class="easy-text">Easy</text>
+      <text x="180" y="0" class="count-text" text-anchor="end">219<tspan fill="#8b949e">/961</tspan></text>
+      <rect x="0" y="6" width="180" height="5" fill="#21262d" rx="2.5" />
+      <rect x="0" y="6" width="39" height="5" fill="#00b8a3" rx="2.5" />
+    </g>
+
+    <!-- Medium -->
+    <g transform="translate(15, 79)">
+      <text x="0" y="0" class="med-text">Med.</text>
+      <text x="180" y="0" class="count-text" text-anchor="end">372<tspan fill="#8b949e">/2105</tspan></text>
+      <rect x="0" y="6" width="180" height="5" fill="#21262d" rx="2.5" />
+      <rect x="0" y="6" width="30" height="5" fill="#ffc01e" rx="2.5" />
+    </g>
+
+    <!-- Hard -->
+    <g transform="translate(15, 106)">
+      <text x="0" y="0" class="hard-text">Hard</text>
+      <text x="180" y="0" class="count-text" text-anchor="end">59<tspan fill="#8b949e">/967</tspan></text>
+      <rect x="0" y="6" width="180" height="5" fill="#21262d" rx="2.5" />
+      <rect x="0" y="6" width="10" height="5" fill="#ef4743" rx="2.5" />
+    </g>
+  </g>
+</svg>
