@@ -69,100 +69,110 @@ def generate_svg(stats):
     hard_solved = stats.get("hard_solved", 0)
     hard_total = stats.get("hard_total", 800)
 
-    # Calculate percentages for progress bars (max width 180)
-    easy_pct = min(100, int((easy_solved / max(1, easy_total)) * 100)) if easy_total else 0
-    med_pct = min(100, int((medium_solved / max(1, medium_total)) * 100)) if medium_total else 0
-    hard_pct = min(100, int((hard_solved / max(1, hard_total)) * 100)) if hard_total else 0
+    # Calculate percentages for progress bars (width 210)
+    easy_pct = (easy_solved / max(1, easy_total)) if easy_total else 0
+    med_pct = (medium_solved / max(1, medium_total)) if medium_total else 0
+    hard_pct = (hard_solved / max(1, hard_total)) if hard_total else 0
 
-    easy_bar_w = int(1.8 * easy_pct)
-    med_bar_w = int(1.8 * med_pct)
-    hard_bar_w = int(1.8 * hard_pct)
+    easy_bar_w = max(4, int(210 * min(1.0, easy_pct)))
+    med_bar_w = max(4, int(210 * min(1.0, med_pct)))
+    hard_bar_w = max(4, int(210 * min(1.0, hard_pct)))
 
-    svg = f"""<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" fill="none" role="img">
   <style>
-    .header {{ font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #FFA116; }}
-    .subtext {{ font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b949e; }}
-    .bold-stat {{ font: 700 22px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f0f6fc; }}
-    .stat-label {{ font: 500 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b949e; }}
-    .easy-text {{ font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #00b8a3; }}
-    .med-text {{ font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffc01e; }}
-    .hard-text {{ font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ef4743; }}
-    .count-text {{ font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c9d1d9; }}
-    .card-bg {{ fill: #0d1117; stroke: #30363d; stroke-width: 1; rx: 10px; }}
-    .inner-card {{ fill: #161b22; rx: 8px; }}
+    .header {{
+      font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+      fill: #70a5fd;
+    }}
+    .stat-label {{
+      font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif;
+      fill: #38bdae;
+    }}
+    .stat-val {{
+      font: 700 13px 'Segoe UI', Ubuntu, Sans-Serif;
+      fill: #c0caf5;
+    }}
+    .easy-label {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #73daca; }}
+    .med-label {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e0af68; }}
+    .hard-label {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f7768e; }}
+    .diff-val {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #a9b1d6; }}
+    .bar-bg {{ fill: #24283b; rx: 3px; }}
   </style>
 
-  <rect width="495" height="195" class="card-bg" />
+  <!-- TokyoNight Background Card -->
+  <rect x="0.5" y="0.5" rx="4.5" height="99%" stroke="#e4e2e2" stroke-opacity="0" width="494" fill="#1a1b26"/>
 
-  <!-- Title & Icon -->
-  <g transform="translate(25, 30)">
-    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.248 5.669 4.757a1.374 1.374 0 0 0-1.942 0l-3.3 3.3a1.374 1.374 0 0 0 0 1.942l4.271 4.271a1.374 1.374 0 0 0 1.942 0l7.306-7.306a1.374 1.374 0 0 0 0-1.942L14.444.438A1.374 1.374 0 0 0 13.483 0z" fill="#FFA116" transform="translate(0, -12) scale(1.1)"/>
-    <text x="26" y="0" class="header">LeetCode Profile Stats</text>
-    <text x="210" y="0" class="subtext">(@{username})</text>
+  <!-- Title -->
+  <g transform="translate(25, 35)">
+    <text x="0" y="0" class="header">LeetCode Stats ({username})</text>
   </g>
 
-  <!-- Left Column: Streak & Ranking Card -->
-  <g transform="translate(25, 52)">
-    <rect width="180" height="120" class="inner-card" />
-    
+  <!-- Left Column: Streak, Active Days, Rank, Total Solved -->
+  <g transform="translate(25, 50)">
     <!-- Streak -->
-    <g transform="translate(15, 32)">
-      <text x="0" y="0" font-size="18">🔥</text>
-      <text x="28" y="-2" class="bold-stat">{streak}</text>
-      <text x="65" y="-3" class="stat-label">Day Streak</text>
+    <g transform="translate(0, 20)">
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="#ff9e64" x="0" y="-12">
+        <path d="M8.5 0C8.5 0 8.7 2.2 7.7 3.5C6.7 4.8 5.2 5.5 5.2 7.2C5.2 9.1 6.8 10.7 8.7 10.7C10.6 10.7 12.2 9.1 12.2 7.2C12.2 4.2 8.5 0 8.5 0ZM8.5 16C4.4 16 1 12.6 1 8.5C1 5.6 2.6 3.1 4.9 1.8C4.6 3.1 4.9 4.5 5.7 5.5C6.4 6.4 7.5 7 8.6 7C9.3 7 10 6.7 10.5 6.3C10.8 7 11 7.7 11 8.5C11 12.6 9.9 16 8.5 16Z"/>
+      </svg>
+      <text class="stat-label" x="25" y="0">Current Streak:</text>
+      <text class="stat-val" x="145" y="0">{streak} Days</text>
     </g>
 
     <!-- Active Days -->
-    <g transform="translate(15, 66)">
-      <text x="0" y="0" font-size="16">📅</text>
-      <text x="28" y="-2" class="bold-stat">{active_days}</text>
-      <text x="75" y="-3" class="stat-label">Active Days</text>
+    <g transform="translate(0, 45)">
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="#7aa2f7" x="0" y="-12">
+        <path d="M4.75 0a.75.75 0 0 1 .75.75V2h5V.75a.75.75 0 0 1 1.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 13.25 16H2.75A1.75 1.75 0 0 1 1 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 0 1 4.75 0ZM2.5 7.5v6.75c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V7.5H2.5Z"/>
+      </svg>
+      <text class="stat-label" x="25" y="0">Total Active Days:</text>
+      <text class="stat-val" x="145" y="0">{active_days}</text>
     </g>
 
-    <!-- Ranking -->
-    <g transform="translate(15, 100)">
-      <text x="0" y="0" font-size="16">🏆</text>
-      <text x="28" y="-2" font-weight="700" font-size="14" fill="#58a6ff" font-family="'Segoe UI', Ubuntu, Sans-Serif">Rank {ranking_str}</text>
+    <!-- Global Rank -->
+    <g transform="translate(0, 70)">
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="#e0af68" x="0" y="-12">
+        <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2.75a3.75 3.75 0 0 1-3.25 3.715V10.5h1.5a1.75 1.75 0 0 1 1.75 1.75v1.25a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1.25A1.75 1.75 0 0 1 5.75 10.5h1.5V8.965A3.75 3.75 0 0 1 4 5.25V2.5Z"/>
+      </svg>
+      <text class="stat-label" x="25" y="0">Global Ranking:</text>
+      <text class="stat-val" x="145" y="0">{ranking_str}</text>
+    </g>
+
+    <!-- Total Solved -->
+    <g transform="translate(0, 95)">
+      <svg viewBox="0 0 16 16" width="16" height="16" fill="#bf91f3" x="0" y="-12">
+        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm9.78-2.22a.75.75 0 0 0-1.06-1.06L6.75 8.19 5.28 6.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4-4Z"/>
+      </svg>
+      <text class="stat-label" x="25" y="0">Total Solved:</text>
+      <text class="stat-val" x="145" y="0">{total_solved} <tspan font-weight="400" fill="#565f89" font-size="11">/{total_questions}</tspan></text>
     </g>
   </g>
 
-  <!-- Right Column: Problems Solved Breakdown -->
-  <g transform="translate(225, 52)">
-    <rect width="245" height="120" class="inner-card" />
-
-    <!-- Total Solved Header -->
-    <g transform="translate(15, 25)">
-      <text x="0" y="0" class="stat-label">Solved Problems:</text>
-      <text x="110" y="0" font-weight="700" font-size="16" fill="#f0f6fc" font-family="'Segoe UI', Ubuntu, Sans-Serif">{total_solved}</text>
-      <text x="145" y="0" class="subtext">/ {total_questions}</text>
-    </g>
-
+  <!-- Right Column: Problems Solved Progress Breakdown -->
+  <g transform="translate(255, 50)">
     <!-- Easy -->
-    <g transform="translate(15, 52)">
-      <text x="0" y="0" class="easy-text">Easy</text>
-      <text x="180" y="0" class="count-text" text-anchor="end">{easy_solved}<tspan fill="#8b949e">/{easy_total}</tspan></text>
-      <rect x="0" y="6" width="180" height="5" fill="#21262d" rx="2.5" />
-      <rect x="0" y="6" width="{easy_bar_w}" height="5" fill="#00b8a3" rx="2.5" />
+    <g transform="translate(0, 20)">
+      <text class="easy-label" x="0" y="0">Easy</text>
+      <text class="diff-val" x="210" y="0" text-anchor="end">{easy_solved} <tspan fill="#565f89" font-size="11">/{easy_total}</tspan></text>
+      <rect class="bar-bg" x="0" y="7" width="210" height="6" />
+      <rect x="0" y="7" width="{easy_bar_w}" height="6" fill="#73daca" rx="3px" />
     </g>
 
     <!-- Medium -->
-    <g transform="translate(15, 79)">
-      <text x="0" y="0" class="med-text">Med.</text>
-      <text x="180" y="0" class="count-text" text-anchor="end">{medium_solved}<tspan fill="#8b949e">/{medium_total}</tspan></text>
-      <rect x="0" y="6" width="180" height="5" fill="#21262d" rx="2.5" />
-      <rect x="0" y="6" width="{med_bar_w}" height="5" fill="#ffc01e" rx="2.5" />
+    <g transform="translate(0, 58)">
+      <text class="med-label" x="0" y="0">Medium</text>
+      <text class="diff-val" x="210" y="0" text-anchor="end">{medium_solved} <tspan fill="#565f89" font-size="11">/{medium_total}</tspan></text>
+      <rect class="bar-bg" x="0" y="7" width="210" height="6" />
+      <rect x="0" y="7" width="{med_bar_w}" height="6" fill="#e0af68" rx="3px" />
     </g>
 
     <!-- Hard -->
-    <g transform="translate(15, 106)">
-      <text x="0" y="0" class="hard-text">Hard</text>
-      <text x="180" y="0" class="count-text" text-anchor="end">{hard_solved}<tspan fill="#8b949e">/{hard_total}</tspan></text>
-      <rect x="0" y="6" width="180" height="5" fill="#21262d" rx="2.5" />
-      <rect x="0" y="6" width="{hard_bar_w}" height="5" fill="#ef4743" rx="2.5" />
+    <g transform="translate(0, 96)">
+      <text class="hard-label" x="0" y="0">Hard</text>
+      <text class="diff-val" x="210" y="0" text-anchor="end">{hard_solved} <tspan fill="#565f89" font-size="11">/{hard_total}</tspan></text>
+      <rect class="bar-bg" x="0" y="7" width="210" height="6" />
+      <rect x="0" y="7" width="{hard_bar_w}" height="6" fill="#f7768e" rx="3px" />
     </g>
   </g>
-</svg>
-"""
+</svg>"""
     return svg
 
 def main():
@@ -205,7 +215,7 @@ def main():
         with open("assets/leetcode-stats.svg", "w", encoding="utf-8") as f:
             f.write(svg_content)
 
-        print("Successfully generated assets/leetcode-stats.svg!")
+        print("Successfully generated assets/leetcode-stats.svg with TokyoNight theme matching GitHub stats card!")
 
     except Exception as e:
         print(f"Error fetching/generating stats: {e}")
