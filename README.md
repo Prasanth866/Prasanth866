@@ -60,9 +60,6 @@
   <a href="https://leetcode.com/u/prasanth_57/" target="_blank">
     <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" />
   </a>
-  <a href="https://github.com/Prasanth866" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-171515?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
 </p>
 
 ---
@@ -80,9 +77,7 @@
 ### GitHub Stats
 
 <p align="center">
-  <a href="https://github.com/Prasanth866" target="_blank">
-    <img src="./assets/github-stats.svg" alt="GitHub Stats" />
-  </a>
+  <img src="./assets/github-stats.svg" alt="GitHub Stats" />
 </p>
 
 ---
