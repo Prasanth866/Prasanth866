@@ -41,7 +41,7 @@
         <path d="M8.5 0C8.5 0 8.7 2.2 7.7 3.5C6.7 4.8 5.2 5.5 5.2 7.2C5.2 9.1 6.8 10.7 8.7 10.7C10.6 10.7 12.2 9.1 12.2 7.2C12.2 4.2 8.5 0 8.5 0ZM8.5 16C4.4 16 1 12.6 1 8.5C1 5.6 2.6 3.1 4.9 1.8C4.6 3.1 4.9 4.5 5.7 5.5C6.4 6.4 7.5 7 8.6 7C9.3 7 10 6.7 10.5 6.3C10.8 7 11 7.7 11 8.5C11 12.6 9.9 16 8.5 16Z"/>
       </svg>
       <text class="stat-label" x="25" y="0">Current Streak:</text>
-      <text class="stat-val" x="145" y="0">53 Days</text>
+      <text class="stat-val" x="145" y="0">52 Days</text>
     </g>
 
     <!-- Active Days -->
@@ -59,7 +59,7 @@
         <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2.75a3.75 3.75 0 0 1-3.25 3.715V10.5h1.5a1.75 1.75 0 0 1 1.75 1.75v1.25a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1.25A1.75 1.75 0 0 1 5.75 10.5h1.5V8.965A3.75 3.75 0 0 1 4 5.25V2.5Z"/>
       </svg>
       <text class="stat-label" x="25" y="0">Global Ranking:</text>
-      <text class="stat-val" x="145" y="0">#115,292</text>
+      <text class="stat-val" x="145" y="0">#114,495</text>
     </g>
 
     <!-- Total Solved -->
@@ -68,7 +68,7 @@
         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm9.78-2.22a.75.75 0 0 0-1.06-1.06L6.75 8.19 5.28 6.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4-4Z"/>
       </svg>
       <text class="stat-label" x="25" y="0">Total Solved:</text>
-      <text class="stat-val" x="145" y="0">652 <tspan font-weight="400" fill="#565f89" font-size="11">/4033</tspan></text>
+      <text class="stat-val" x="145" y="0">653 <tspan font-weight="400" fill="#565f89" font-size="11">/4033</tspan></text>
     </g>
   </g>
 
@@ -93,7 +93,7 @@
     <!-- Hard -->
     <g transform="translate(0, 98)">
       <text class="hard-label" x="0" y="0">Hard</text>
-      <text class="diff-val" x="205" y="0" text-anchor="end">60 <tspan fill="#565f89" font-size="11">/967</tspan></text>
+      <text class="diff-val" x="205" y="0" text-anchor="end">61 <tspan fill="#565f89" font-size="11">/967</tspan></text>
       <rect class="bar-bg" x="0" y="8" width="205" height="6" />
       <rect x="0" y="8" width="12" height="6" fill="#f7768e" rx="3px" />
     </g>
