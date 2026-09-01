@@ -59,7 +59,7 @@
         <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2.75a3.75 3.75 0 0 1-3.25 3.715V10.5h1.5a1.75 1.75 0 0 1 1.75 1.75v1.25a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1.25A1.75 1.75 0 0 1 5.75 10.5h1.5V8.965A3.75 3.75 0 0 1 4 5.25V2.5Z"/>
       </svg>
       <text class="stat-label" x="25" y="0">Global Ranking:</text>
-      <text class="stat-val" x="145" y="0">#112,296</text>
+      <text class="stat-val" x="145" y="0">#111,522</text>
     </g>
 
     <!-- Total Solved -->
