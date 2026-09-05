@@ -59,7 +59,7 @@
         <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2.75a3.75 3.75 0 0 1-3.25 3.715V10.5h1.5a1.75 1.75 0 0 1 1.75 1.75v1.25a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1.25A1.75 1.75 0 0 1 5.75 10.5h1.5V8.965A3.75 3.75 0 0 1 4 5.25V2.5Z"/>
       </svg>
       <text class="stat-label" x="25" y="0">Global Ranking:</text>
-      <text class="stat-val" x="145" y="0">#108,887</text>
+      <text class="stat-val" x="145" y="0">#103,798</text>
     </g>
 
     <!-- Total Solved -->
@@ -68,7 +68,7 @@
         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm9.78-2.22a.75.75 0 0 0-1.06-1.06L6.75 8.19 5.28 6.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4-4Z"/>
       </svg>
       <text class="stat-label" x="25" y="0">Total Solved:</text>
-      <text class="stat-val" x="145" y="0">672 <tspan font-weight="400" fill="#565f89" font-size="11">/4042</tspan></text>
+      <text class="stat-val" x="145" y="0">683 <tspan font-weight="400" fill="#565f89" font-size="11">/4042</tspan></text>
     </g>
   </g>
 
@@ -77,17 +77,17 @@
     <!-- Easy -->
     <g transform="translate(0, 20)">
       <text class="easy-label" x="0" y="0">Easy</text>
-      <text class="diff-val" x="205" y="0" text-anchor="end">225 <tspan fill="#565f89" font-size="11">/962</tspan></text>
+      <text class="diff-val" x="205" y="0" text-anchor="end">227 <tspan fill="#565f89" font-size="11">/962</tspan></text>
       <rect class="bar-bg" x="0" y="8" width="205" height="6" />
-      <rect x="0" y="8" width="47" height="6" fill="#73daca" rx="3px" />
+      <rect x="0" y="8" width="48" height="6" fill="#73daca" rx="3px" />
     </g>
 
     <!-- Medium -->
     <g transform="translate(0, 59)">
       <text class="med-label" x="0" y="0">Medium</text>
-      <text class="diff-val" x="205" y="0" text-anchor="end">385 <tspan fill="#565f89" font-size="11">/2109</tspan></text>
+      <text class="diff-val" x="205" y="0" text-anchor="end">394 <tspan fill="#565f89" font-size="11">/2109</tspan></text>
       <rect class="bar-bg" x="0" y="8" width="205" height="6" />
-      <rect x="0" y="8" width="37" height="6" fill="#e0af68" rx="3px" />
+      <rect x="0" y="8" width="38" height="6" fill="#e0af68" rx="3px" />
     </g>
 
     <!-- Hard -->
