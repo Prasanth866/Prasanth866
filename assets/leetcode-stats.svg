@@ -68,7 +68,7 @@
         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm9.78-2.22a.75.75 0 0 0-1.06-1.06L6.75 8.19 5.28 6.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4-4Z"/>
       </svg>
       <text class="stat-label" x="25" y="0">Total Solved:</text>
-      <text class="stat-val" x="145" y="0">732 <tspan font-weight="400" fill="#565f89" font-size="11">/4064</tspan></text>
+      <text class="stat-val" x="145" y="0">735 <tspan font-weight="400" fill="#565f89" font-size="11">/4068</tspan></text>
     </g>
   </g>
 
@@ -77,7 +77,7 @@
     <!-- Easy -->
     <g transform="translate(0, 20)">
       <text class="easy-label" x="0" y="0">Easy</text>
-      <text class="diff-val" x="205" y="0" text-anchor="end">241 <tspan fill="#565f89" font-size="11">/967</tspan></text>
+      <text class="diff-val" x="205" y="0" text-anchor="end">242 <tspan fill="#565f89" font-size="11">/968</tspan></text>
       <rect class="bar-bg" x="0" y="8" width="205" height="6" />
       <rect x="0" y="8" width="51" height="6" fill="#73daca" rx="3px" />
     </g>
@@ -85,7 +85,7 @@
     <!-- Medium -->
     <g transform="translate(0, 59)">
       <text class="med-label" x="0" y="0">Medium</text>
-      <text class="diff-val" x="205" y="0" text-anchor="end">420 <tspan fill="#565f89" font-size="11">/2119</tspan></text>
+      <text class="diff-val" x="205" y="0" text-anchor="end">421 <tspan fill="#565f89" font-size="11">/2121</tspan></text>
       <rect class="bar-bg" x="0" y="8" width="205" height="6" />
       <rect x="0" y="8" width="40" height="6" fill="#e0af68" rx="3px" />
     </g>
@@ -93,9 +93,9 @@
     <!-- Hard -->
     <g transform="translate(0, 98)">
       <text class="hard-label" x="0" y="0">Hard</text>
-      <text class="diff-val" x="205" y="0" text-anchor="end">71 <tspan fill="#565f89" font-size="11">/978</tspan></text>
+      <text class="diff-val" x="205" y="0" text-anchor="end">72 <tspan fill="#565f89" font-size="11">/979</tspan></text>
       <rect class="bar-bg" x="0" y="8" width="205" height="6" />
-      <rect x="0" y="8" width="14" height="6" fill="#f7768e" rx="3px" />
+      <rect x="0" y="8" width="15" height="6" fill="#f7768e" rx="3px" />
     </g>
   </g>
 </svg>
