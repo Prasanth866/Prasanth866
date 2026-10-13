@@ -43,7 +43,7 @@
         <path fill-rule="evenodd" d="M10.5 8a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.75 0a3.25 3.25 0 00-6.5 0H1.75a.75.75 0 000 1.5h3a3.25 3.25 0 006.5 0h3a.75.75 0 000-1.5h-3z"/>
       </svg>
       <text class="stat-label" x="25" y="0">Total Commits:</text>
-      <text class="stat-val" x="145" y="0">347</text>
+      <text class="stat-val" x="145" y="0">353</text>
     </g>
 
     <!-- Total PRs -->
@@ -79,16 +79,16 @@
     <g transform="translate(0, 20)">
       <circle cx="4" cy="-4" r="4" fill="#3572A5" />
       <text class="lang-label" x="14" y="0">Python</text>
-      <text class="diff-val" x="205" y="0" text-anchor="end">50.0%</text>
+      <text class="diff-val" x="205" y="0" text-anchor="end">42.9%</text>
       <rect class="bar-bg" x="0" y="6" width="205" height="5" />
-      <rect x="0" y="6" width="102" height="5" fill="#3572A5" rx="2.5px" />
+      <rect x="0" y="6" width="87" height="5" fill="#3572A5" rx="2.5px" />
     </g>
     <g transform="translate(0, 48)">
       <circle cx="4" cy="-4" r="4" fill="#DA5B0B" />
       <text class="lang-label" x="14" y="0">Jupyter Notebook</text>
-      <text class="diff-val" x="205" y="0" text-anchor="end">21.4%</text>
+      <text class="diff-val" x="205" y="0" text-anchor="end">28.6%</text>
       <rect class="bar-bg" x="0" y="6" width="205" height="5" />
-      <rect x="0" y="6" width="43" height="5" fill="#DA5B0B" rx="2.5px" />
+      <rect x="0" y="6" width="58" height="5" fill="#DA5B0B" rx="2.5px" />
     </g>
     <g transform="translate(0, 76)">
       <circle cx="4" cy="-4" r="4" fill="#3178C6" />
