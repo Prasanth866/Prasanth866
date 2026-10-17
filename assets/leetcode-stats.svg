@@ -68,7 +68,7 @@
         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm9.78-2.22a.75.75 0 0 0-1.06-1.06L6.75 8.19 5.28 6.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4-4Z"/>
       </svg>
       <text class="stat-label" x="25" y="0">Total Solved:</text>
-      <text class="stat-val" x="145" y="0">759 <tspan font-weight="400" fill="#565f89" font-size="11">/4082</tspan></text>
+      <text class="stat-val" x="145" y="0">760 <tspan font-weight="400" fill="#565f89" font-size="11">/4082</tspan></text>
     </g>
   </g>
 
@@ -93,9 +93,9 @@
     <!-- Hard -->
     <g transform="translate(0, 98)">
       <text class="hard-label" x="0" y="0">Hard</text>
-      <text class="diff-val" x="205" y="0" text-anchor="end">76 <tspan fill="#565f89" font-size="11">/983</tspan></text>
+      <text class="diff-val" x="205" y="0" text-anchor="end">77 <tspan fill="#565f89" font-size="11">/983</tspan></text>
       <rect class="bar-bg" x="0" y="8" width="205" height="6" />
-      <rect x="0" y="8" width="15" height="6" fill="#f7768e" rx="3px" />
+      <rect x="0" y="8" width="16" height="6" fill="#f7768e" rx="3px" />
     </g>
   </g>
 </svg>
